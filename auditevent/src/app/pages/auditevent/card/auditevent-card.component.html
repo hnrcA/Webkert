@@ -1,0 +1,21 @@
+<mat-card *ngIf="auditevent" appOnHover>
+    <mat-card-header>
+      <mat-card-title>{{auditevent.resourceType}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{auditevent.type}}</p>
+      <p>{{auditevent.subtype}}</p>
+      <p>{{auditevent.action}}</p>
+      <p>{{auditevent.period}}</p>
+      <p>{{auditevent.recorded}}</p>
+      <p>{{auditevent.outcome}}</p>
+      <p>{{auditevent.outcomeDesc}}</p>
+      <p>{{auditevent.purposeOfEvent}}</p>
+      <p>{{auditevent.agent}}</p>
+      <p>{{auditevent.source}}</p>
+      <p>{{auditevent.entity}}</p>
+      <button mat-raised-button class="action-btn2" (click)="delete()" color="warn">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-content>
+</mat-card>

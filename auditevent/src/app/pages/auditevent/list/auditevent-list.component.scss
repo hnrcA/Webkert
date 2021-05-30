@@ -1,0 +1,21 @@
+.action-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+.action-btn2 {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+}
+.centering {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

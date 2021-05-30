@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button [routerLink]="[ '/' ]">
+        <mat-icon>home</mat-icon>
+      </button>
+      <span>Profil</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<app-container *ngIf="form" [formGroup]="form">
+    <mat-card class="margin-bottom">
+      <mat-card-header>
+        <mat-card-title>Email</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item>
+            <mat-icon mat-list-icon>lock</mat-icon>
+            <div mat-line> E-mail </div>
+            <div mat-line> {{form.value.identifier[1].value}} </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+</app-container>

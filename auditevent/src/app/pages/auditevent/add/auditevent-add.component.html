@@ -1,0 +1,63 @@
+<form [formGroup]="form">
+    <h3>AuditEvent felvétel</h3>
+    <mat-form-field class="max-width">
+      <mat-label>ResourceType</mat-label>
+      <input matInput placeholder="Pl. AuditEvent" focus formControlName="resourceType" required>
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Type</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="type" required>
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>subType</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="subtype" >
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Action</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="action" >
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Pick a period date</mat-label>
+      <input matInput [matDatepicker]="picker2" formControlName="period">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Pick a recorded date</mat-label>
+      <input matInput [matDatepicker]="picker3" formControlName="recorded" required>
+      <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+      <mat-datepicker #picker3></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Outcome</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="outcome" >
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>OutcomeDesc</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="outcomeDesc" >
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>PurposeOfEvent</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="purposeOfEvent" >
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Select Agent</mat-label>
+      <mat-select  formControlName="agent" required="age">
+        <mat-option value="Agent Graham">Agent Graham</mat-option>
+        <mat-option value="Agent Joe">Agent Joe</mat-option>
+        <mat-option value="Agent Bob">Agent Bob</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Source</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="source" required>
+    </mat-form-field>
+    <mat-form-field class="max-width">
+      <mat-label>Entity</mat-label>
+      <input matInput placeholder="Pl. example" focus formControlName="entity" >
+    </mat-form-field>
+    <div style="display: flex; justify-content: flex-end;">
+      <button mat-button (click)="dialogRef.close()" class="margin-right">MÉGSEM</button>
+      <button mat-button [mat-dialog-close]="form.value" >FELVÉTEL</button>
+    </div>
+</form>
